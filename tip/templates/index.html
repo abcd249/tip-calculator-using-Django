@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+    <title></title>
+  </head>
+  <body>
+<div class="layout">
+
+
+    <div class="">
+      <form>
+        <p>enter amount</p>
+        <p> $
+        <input type="number" id="amount">
+        </p>
+      </form>
+</div>
+
+<form class="" action="index.html" method="post">
+
+  <p>select tip amount</p>
+  <select id="tip">
+    <option disabled selected value="0">choose tip</option>
+    <option value="0.3">30% - outstanding</option>
+    <option value="0.1">10% - good</option>
+    <option value="0.05">5% - poor</option>
+  </select>
+</form>
+
+<p>split the bill in how many people </p>
+<input type="number" placeholder="no. of people" id="total_people" >
+
+<button type="button" name="button" onclick="final_amount()">calculate ! </button>
+<h3 id="value_display"></h3>
+</div>
+
+<script type="text/javascript" src="{% static 'main.js'  %}">
+  </script>
+
+  </body>
+</html>
